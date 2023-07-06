@@ -115,9 +115,9 @@ void SystemClass::InitializeWindows(int& screenWidth, int& screenHeight)
 	ApplicationHandle = this;
 
 	m_hinstance = GetModuleHandle(nullptr);
-	m_applicationName = L"RasterTek - DirectX 11 Tutorial";
+	m_applicationName = "RasterTek - DirectX 11 Tutorial";
 
-	WNDCLASSEXW wc;
+	WNDCLASSEX wc;
 	wc.style = CS_HREDRAW | CS_VREDRAW | CS_OWNDC;
 	wc.lpfnWndProc = WndProc;
 	wc.cbClsExtra = 0;
@@ -131,7 +131,7 @@ void SystemClass::InitializeWindows(int& screenWidth, int& screenHeight)
 	wc.lpszClassName = m_applicationName;
 	wc.cbSize = sizeof(WNDCLASSEXW);
 	
-	RegisterClassExW(&wc);
+	RegisterClassEx(&wc);
 
 	screenWidth = GetSystemMetrics(SM_CXSCREEN);
 	screenHeight = GetSystemMetrics(SM_CYSCREEN);
@@ -145,11 +145,73 @@ void SystemClass::InitializeWindows(int& screenWidth, int& screenHeight)
 		ZeroMemory(&dmScreenSettings, sizeof(DEVMODE));
 
 		dmScreenSettings.dmSize = sizeof(dmScreenSettings);
-		dmScreenSettings.dmPelsWidth = static_cast<unsigned long>(screenWidth)
+		dmScreenSettings.dmPelsWidth = static_cast<unsigned long>(screenWidth);
+		dmScreenSettings.dmPelsHeight = static_cast<unsigned long>(screenHeight);
+		dmScreenSettings.dmBitsPerPel = 32;
+		dmScreenSettings.dmFields = DM_BITSPERPEL | DM_PELSWIDTH | DM_PELSHEIGHT;
+
+		ChangeDisplaySettings(&dmScreenSettings, CDS_FULLSCREEN);
+	}
+	else
+	{
+		screenWidth = 800;
+		screenHeight = 600;
+
+		posX = (GetSystemMetrics(SM_CXSCREEN) - screenWidth) / 2;
+		posY = (GetSystemMetrics(SM_CYSCREEN) - screenHeight) / 2;
 	}
 
+	m_hwnd = CreateWindowEx(
+		WS_EX_APPWINDOW, 
+		m_applicationName, 
+		m_applicationName,
+		WS_CLIPSIBLINGS | WS_CLIPCHILDREN | WS_POPUP,
+		posX, 
+		posY, 
+		screenWidth, 
+		screenHeight, 
+		nullptr, 
+		nullptr,
+		m_hinstance, 
+		nullptr
+	);
+
+	ShowWindow(m_hwnd, SW_SHOW);
+	SetForegroundWindow(m_hwnd);
+	SetFocus(m_hwnd);
 }
 
 void SystemClass::ShutdownWindows()
 {
+	if (FULL_SCREEN)
+	{
+		ChangeDisplaySettings(nullptr, 0);
+	}
+
+	DestroyWindow(m_hwnd);
+	m_hwnd = nullptr;
+
+	UnregisterClass(m_applicationName, m_hinstance);
+	m_hinstance = nullptr;
+
+	ApplicationHandle = nullptr;
+}
+
+LRESULT WndProc(HWND hwnd, UINT umsg, WPARAM wparam, LPARAM lparam)
+{
+	switch (umsg)
+	{
+	case WM_DESTROY:
+		PostQuitMessage(0);
+		break;
+
+	case WM_CLOSE:
+		PostQuitMessage(0);
+		break;
+
+	default:
+		return ApplicationHandle->MessageHandler(hwnd, umsg, wparam, lparam);
+	}
+
+	return 0;
 }
