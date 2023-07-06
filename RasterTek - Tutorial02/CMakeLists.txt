@@ -1,12 +1,18 @@
 # CMake 최소 버전입니다.
 cmake_minimum_required(VERSION 3.27)
 
-# 소스 코드 경로입니다.
-set(TUTORIAL_SOURCE_PATH "${CMAKE_CURRENT_SOURCE_DIR}/Source")
-file(GLOB_RECURSE TUTORIAL_SOURCE "${TUTORIAL_SOURCE_PATH}/*")
+# RasterTek 솔루션입니다.
+project(RasterTek LANGUAGES CXX)
 
 # C++17 표준을 설정합니다.
 set(CMAKE_CXX_STANDARD 17)
+
+# C++ 표준을 필수적으로 사용함을 명시합니다.
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
+
+# 소스 코드 경로입니다.
+set(TUTORIAL_SOURCE_PATH "${CMAKE_CURRENT_SOURCE_DIR}/Source")
+file(GLOB_RECURSE TUTORIAL_SOURCE "${TUTORIAL_SOURCE_PATH}/*")
 
 # Tutorial 프로젝트입니다.
 add_executable(Tutorial02 WIN32 ${TUTORIAL_SOURCE})
