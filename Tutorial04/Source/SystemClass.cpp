@@ -15,7 +15,7 @@ SystemClass::SystemClass(const SystemClass& other)
 SystemClass::~SystemClass()
 {
 }
-
+#include <string>
 bool SystemClass::Initialize()
 {
 	int screenWidth = 0;
