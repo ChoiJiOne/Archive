@@ -31,11 +31,14 @@
 
 ## Tutorial
 
-### [Tutorial02 : Creating a Framework and Window](./Tutorial02/)
+### [Tutorial 02 : Creating a Framework and Window](./Tutorial02/)
 <img src="Image/Tutorial02.png" alt="Tutorial02" width="400" height="300">
 
-### [Tutorial03 : Initializing DirectX 11](./Tutorial03/)
+### [Tutorial 03 : Initializing DirectX 11](./Tutorial03/)
 <img src="Image/Tutorial03.png" alt="Tutorial03" width="400" height="300">
 
-### [Tutorial 4: Buffers, Shaders, and HLSL](./Tutorial04/)
+### [Tutorial 04 : Buffers, Shaders, and HLSL](./Tutorial04/)
 <img src="Image/Tutorial04.png" alt="Tutorial04" width="400" height="300">
+
+### [Tutorial 05 : Texturing](./Tutorial05/)
+<img src="Image/Tutorial05.png" alt="Tutorial05" width="400" height="300">
