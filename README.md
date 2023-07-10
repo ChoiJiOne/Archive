@@ -42,3 +42,6 @@
 
 ### [Tutorial 05 : Texturing](./Tutorial05/)
 <img src="Image/Tutorial05.png" alt="Tutorial05" width="400" height="300">
+
+### [Tutorial 06 : Diffuse Lighting](./Tutorial06/)
+<img src="Image/Tutorial06.png" alt="Tutorial06" width="400" height="300">
