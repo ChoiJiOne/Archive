@@ -54,3 +54,6 @@
 
 ### [Tutorial 09 : Ambient Lighting](./Tutorial09/)
 <img src="Image/Tutorial09.png" alt="Tutorial09" width="400" height="300">
+
+### [Tutorial 10 : Specular Lighting](./Tutorial10/)
+<img src="Image/Tutorial10.png" alt="Tutorial10" width="400" height="300">
