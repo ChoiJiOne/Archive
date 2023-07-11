@@ -48,3 +48,9 @@
 
 ### [Tutorial 07 : 3D Model Rendering](./Tutorial07/)
 <img src="Image/Tutorial07.png" alt="Tutorial07" width="400" height="300">
+
+### Tutorial 08 : Loading Maya Models
+- 코드 없음
+
+### [Tutorial 09 : Ambient Lighting](./Tutorial09/)
+<img src="Image/Tutorial09.png" alt="Tutorial09" width="400" height="300">
