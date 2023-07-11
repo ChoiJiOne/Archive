@@ -45,3 +45,6 @@
 
 ### [Tutorial 06 : Diffuse Lighting](./Tutorial06/)
 <img src="Image/Tutorial06.png" alt="Tutorial06" width="400" height="300">
+
+### [Tutorial 07 : 3D Model Rendering](./Tutorial07/)
+<img src="Image/Tutorial07.png" alt="Tutorial07" width="400" height="300">
