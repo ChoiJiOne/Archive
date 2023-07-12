@@ -1,6 +1,5 @@
-# [LearnOpenGL의 Getting Started 부분 번역 및 실습](https://learnopengl.com/)
-
-여기에는 LearnOpenGL의 Getting Started 부분 번역 및 실습 코드가 있는 부분입니다.
+# [LearnOpenGL](https://learnopengl.com/)
+- LearnOpenGL의 번역 및 실습 코드 저장 폴더입니다.
 <br><br>
 
 
