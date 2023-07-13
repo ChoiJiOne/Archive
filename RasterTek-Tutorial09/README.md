@@ -27,30 +27,8 @@
   ```
   > GenerateProjectFiles.bat vs2022
   ```
+<br><br>
 
-
-## Tutorial
-
-### [Tutorial 02 : Creating a Framework and Window](./Tutorial02/)
-<img src="Image/Tutorial02.png" alt="Tutorial02" width="400" height="300">
-
-### [Tutorial 03 : Initializing DirectX 11](./Tutorial03/)
-<img src="Image/Tutorial03.png" alt="Tutorial03" width="400" height="300">
-
-### [Tutorial 04 : Buffers, Shaders, and HLSL](./Tutorial04/)
-<img src="Image/Tutorial04.png" alt="Tutorial04" width="400" height="300">
-
-### [Tutorial 05 : Texturing](./Tutorial05/)
-<img src="Image/Tutorial05.png" alt="Tutorial05" width="400" height="300">
-
-### [Tutorial 06 : Diffuse Lighting](./Tutorial06/)
-<img src="Image/Tutorial06.png" alt="Tutorial06" width="400" height="300">
-
-### [Tutorial 07 : 3D Model Rendering](./Tutorial07/)
-<img src="Image/Tutorial07.png" alt="Tutorial07" width="400" height="300">
-
-### Tutorial 08 : Loading Maya Models
-- 코드 없음
 
 ### [Tutorial 09 : Ambient Lighting](./Tutorial09/)
 <img src="Image/Tutorial09.png" alt="Tutorial09" width="400" height="300">
